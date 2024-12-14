@@ -8,6 +8,237 @@
   },
   "servers": [
     {
+      "id": "Ax4-1.20.1",
+      "name": "Ax4 (Minecraft 1.20.1)",
+      "description": "Ax4 Running Minecraft 1.20.1 (Fabric v0.16.9)",
+      "icon": null,
+      "version": "1.0.0",
+      "address": "localhost:25565",
+      "minecraftVersion": "1.20.1",
+      "discord": {
+        "shortId": "<FILL IN OR REMOVE DISCORD OBJECT>",
+        "largeImageText": "<FILL IN OR REMOVE DISCORD OBJECT>",
+        "largeImageKey": "<FILL IN OR REMOVE DISCORD OBJECT>"
+      },
+      "mainServer": false,
+      "autoconnect": false,
+      "modules": [
+        {
+          "id": "net.fabricmc:fabric-loader:0.16.9",
+          "name": "Fabric (fabric-loader)",
+          "type": "Fabric",
+          "artifact": {
+            "size": 1387357,
+            "MD5": "27a6ef87676ce6316c777d81c1cd2962",
+            "url": "https://bettendanet.github.io/nebula/repo/lib/net/fabricmc/fabric-loader/0.16.9/fabric-loader-0.16.9.jar"
+          },
+          "subModules": [
+            {
+              "id": "1.20.1-fabric-0.16.9",
+              "name": "Fabric (version.json)",
+              "type": "VersionManifest",
+              "artifact": {
+                "size": 2857,
+                "MD5": "856e0b4725cc3c482052eb19f42f4c25",
+                "url": "https://bettendanet.github.io/nebula/repo/versions/1.20.1-fabric-0.16.9/1.20.1-fabric-0.16.9.json"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm:9.7.1",
+              "name": "Fabric (asm)",
+              "type": "Library",
+              "artifact": {
+                "size": 126093,
+                "MD5": "e2cdd32d198ad31427d298eee9d39d8d",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-analysis:9.7.1",
+              "name": "Fabric (asm-analysis)",
+              "type": "Library",
+              "artifact": {
+                "size": 35126,
+                "MD5": "4cd9e7178dfb85371bba3077e40cd514",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-analysis/9.7.1/asm-analysis-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-commons:9.7.1",
+              "name": "Fabric (asm-commons)",
+              "type": "Library",
+              "artifact": {
+                "size": 73459,
+                "MD5": "8344aea3c8b7d707e9d35a62710e77c9",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-commons/9.7.1/asm-commons-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-tree:9.7.1",
+              "name": "Fabric (asm-tree)",
+              "type": "Library",
+              "artifact": {
+                "size": 51939,
+                "MD5": "e85029f613b6469989cc7cf53fe06b74",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-tree/9.7.1/asm-tree-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-util:9.7.1",
+              "name": "Fabric (asm-util)",
+              "type": "Library",
+              "artifact": {
+                "size": 94519,
+                "MD5": "36d373a9cd6cad9b35db9f984c6b4bbb",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-util/9.7.1/asm-util-9.7.1.jar"
+              }
+            },
+            {
+              "id": "net.fabricmc:sponge-mixin:0.15.4+mixin.0.8.7",
+              "name": "Fabric (sponge-mixin)",
+              "type": "Library",
+              "artifact": {
+                "size": 1494834,
+                "MD5": "991ca8be2c408fe19eb64014d8a18243",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/net/fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/sponge-mixin-0.15.4+mixin.0.8.7.jar"
+              }
+            },
+            {
+              "id": "net.fabricmc:intermediary:1.20.1",
+              "name": "Fabric (intermediary)",
+              "type": "Library",
+              "artifact": {
+                "size": 573365,
+                "MD5": "3f4768ac751cac3418266d1d7aa15f55",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/net/fabricmc/intermediary/1.20.1/intermediary-1.20.1.jar"
+              }
+            }
+          ]
+        },
+        {
+          "id": "org.quiltmc:quilt-loader:0.27.0",
+          "name": "Quilt (quilt-loader)",
+          "artifact": {
+            "size": 2492855,
+            "MD5": "2a48d2692e0929002b16ee5bec0a99c2",
+            "url": "https://bettendanet.github.io/nebula/repo/lib/org/quiltmc/quilt-loader/0.27.0/quilt-loader-0.27.0.jar"
+          },
+          "subModules": [
+            {
+              "id": "1.20.1-quilt-",
+              "name": "Quilt (version.json)",
+              "type": "VersionManifest",
+              "artifact": {
+                "size": 1179,
+                "MD5": "6bd8c8b721c645bb73301afbd9f5075d",
+                "url": "https://bettendanet.github.io/nebula/repo/versions/1.20.1-quilt-/1.20.1-quilt-.json"
+              }
+            },
+            {
+              "id": "net.fabricmc:sponge-mixin:0.15.3+mixin.0.8.7",
+              "name": "Quilt (sponge-mixin)",
+              "type": "Library",
+              "artifact": {
+                "size": 1494835,
+                "MD5": "a33725dd52de94c33514b6867c8d0b4b",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/net/fabricmc/sponge-mixin/0.15.3+mixin.0.8.7/sponge-mixin-0.15.3+mixin.0.8.7.jar"
+              }
+            },
+            {
+              "id": "org.quiltmc:quilt-json5:1.0.4+final",
+              "name": "Quilt (quilt-json5)",
+              "type": "Library",
+              "artifact": {
+                "size": 25897,
+                "MD5": "47783c9a809c7dc7e69919e820f24688",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/quiltmc/quilt-json5/1.0.4+final/quilt-json5-1.0.4+final.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm:9.7.1",
+              "name": "Quilt (asm)",
+              "type": "Library",
+              "artifact": {
+                "size": 126093,
+                "MD5": "e2cdd32d198ad31427d298eee9d39d8d",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-analysis:9.7.1",
+              "name": "Quilt (asm-analysis)",
+              "type": "Library",
+              "artifact": {
+                "size": 35126,
+                "MD5": "4cd9e7178dfb85371bba3077e40cd514",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-analysis/9.7.1/asm-analysis-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-commons:9.7.1",
+              "name": "Quilt (asm-commons)",
+              "type": "Library",
+              "artifact": {
+                "size": 73459,
+                "MD5": "8344aea3c8b7d707e9d35a62710e77c9",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-commons/9.7.1/asm-commons-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-tree:9.7.1",
+              "name": "Quilt (asm-tree)",
+              "type": "Library",
+              "artifact": {
+                "size": 51939,
+                "MD5": "e85029f613b6469989cc7cf53fe06b74",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-tree/9.7.1/asm-tree-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-util:9.7.1",
+              "name": "Quilt (asm-util)",
+              "type": "Library",
+              "artifact": {
+                "size": 94519,
+                "MD5": "36d373a9cd6cad9b35db9f984c6b4bbb",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-util/9.7.1/asm-util-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.quiltmc:quilt-config:1.3.1",
+              "name": "Quilt (quilt-config)",
+              "type": "Library",
+              "artifact": {
+                "size": 155315,
+                "MD5": "4079ad0e22cd1963840c5a180b88796e",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/quiltmc/quilt-config/1.3.1/quilt-config-1.3.1.jar"
+              }
+            },
+            {
+              "id": "org.quiltmc:hashed:1.20.1",
+              "name": "Quilt (hashed)",
+              "type": "Library",
+              "artifact": {
+                "size": 798778,
+                "MD5": "dd58975c03d1d51cd176c9c2059af4b8",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/quiltmc/hashed/1.20.1/hashed-1.20.1.jar"
+              }
+            },
+            {
+              "id": "net.fabricmc:intermediary:1.20.1",
+              "name": "Quilt (intermediary)",
+              "type": "Library",
+              "artifact": {
+                "size": 573365,
+                "MD5": "3f4768ac751cac3418266d1d7aa15f55",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/net/fabricmc/intermediary/1.20.1/intermediary-1.20.1.jar"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "seal-1.20.1",
       "name": "seal (Minecraft 1.20.1)",
       "description": "seal Running Minecraft 1.20.1 (Quilt v0.27.1-beta.1)",
@@ -22,7 +253,129 @@
       },
       "mainServer": false,
       "autoconnect": false,
-      "modules": []
+      "modules": [
+        {
+          "id": "org.quiltmc:quilt-loader:0.27.0",
+          "name": "Quilt (quilt-loader)",
+          "artifact": {
+            "size": 2492855,
+            "MD5": "2a48d2692e0929002b16ee5bec0a99c2",
+            "url": "https://bettendanet.github.io/nebula/repo/lib/org/quiltmc/quilt-loader/0.27.0/quilt-loader-0.27.0.jar"
+          },
+          "subModules": [
+            {
+              "id": "1.20.1-quilt-0.27.1-beta.1",
+              "name": "Quilt (version.json)",
+              "type": "VersionManifest",
+              "artifact": {
+                "size": 1179,
+                "MD5": "6bd8c8b721c645bb73301afbd9f5075d",
+                "url": "https://bettendanet.github.io/nebula/repo/versions/1.20.1-quilt-0.27.1-beta.1/1.20.1-quilt-0.27.1-beta.1.json"
+              }
+            },
+            {
+              "id": "net.fabricmc:sponge-mixin:0.15.3+mixin.0.8.7",
+              "name": "Quilt (sponge-mixin)",
+              "type": "Library",
+              "artifact": {
+                "size": 1494835,
+                "MD5": "a33725dd52de94c33514b6867c8d0b4b",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/net/fabricmc/sponge-mixin/0.15.3+mixin.0.8.7/sponge-mixin-0.15.3+mixin.0.8.7.jar"
+              }
+            },
+            {
+              "id": "org.quiltmc:quilt-json5:1.0.4+final",
+              "name": "Quilt (quilt-json5)",
+              "type": "Library",
+              "artifact": {
+                "size": 25897,
+                "MD5": "47783c9a809c7dc7e69919e820f24688",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/quiltmc/quilt-json5/1.0.4+final/quilt-json5-1.0.4+final.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm:9.7.1",
+              "name": "Quilt (asm)",
+              "type": "Library",
+              "artifact": {
+                "size": 126093,
+                "MD5": "e2cdd32d198ad31427d298eee9d39d8d",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-analysis:9.7.1",
+              "name": "Quilt (asm-analysis)",
+              "type": "Library",
+              "artifact": {
+                "size": 35126,
+                "MD5": "4cd9e7178dfb85371bba3077e40cd514",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-analysis/9.7.1/asm-analysis-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-commons:9.7.1",
+              "name": "Quilt (asm-commons)",
+              "type": "Library",
+              "artifact": {
+                "size": 73459,
+                "MD5": "8344aea3c8b7d707e9d35a62710e77c9",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-commons/9.7.1/asm-commons-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-tree:9.7.1",
+              "name": "Quilt (asm-tree)",
+              "type": "Library",
+              "artifact": {
+                "size": 51939,
+                "MD5": "e85029f613b6469989cc7cf53fe06b74",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-tree/9.7.1/asm-tree-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-util:9.7.1",
+              "name": "Quilt (asm-util)",
+              "type": "Library",
+              "artifact": {
+                "size": 94519,
+                "MD5": "36d373a9cd6cad9b35db9f984c6b4bbb",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-util/9.7.1/asm-util-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.quiltmc:quilt-config:1.3.1",
+              "name": "Quilt (quilt-config)",
+              "type": "Library",
+              "artifact": {
+                "size": 155315,
+                "MD5": "4079ad0e22cd1963840c5a180b88796e",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/quiltmc/quilt-config/1.3.1/quilt-config-1.3.1.jar"
+              }
+            },
+            {
+              "id": "org.quiltmc:hashed:1.20.1",
+              "name": "Quilt (hashed)",
+              "type": "Library",
+              "artifact": {
+                "size": 798778,
+                "MD5": "dd58975c03d1d51cd176c9c2059af4b8",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/quiltmc/hashed/1.20.1/hashed-1.20.1.jar"
+              }
+            },
+            {
+              "id": "net.fabricmc:intermediary:1.20.1",
+              "name": "Quilt (intermediary)",
+              "type": "Library",
+              "artifact": {
+                "size": 573365,
+                "MD5": "3f4768ac751cac3418266d1d7aa15f55",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/net/fabricmc/intermediary/1.20.1/intermediary-1.20.1.jar"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "seal-build-1.20.1",
@@ -41,12 +394,214 @@
       "autoconnect": false,
       "modules": [
         {
+          "id": "org.quiltmc:quilt-loader:0.27.0",
+          "name": "Quilt (quilt-loader)",
+          "artifact": {
+            "size": 2492855,
+            "MD5": "2a48d2692e0929002b16ee5bec0a99c2",
+            "url": "https://bettendanet.github.io/nebula/repo/lib/org/quiltmc/quilt-loader/0.27.0/quilt-loader-0.27.0.jar"
+          },
+          "subModules": [
+            {
+              "id": "1.20.1-quilt-0.27.1-beta.1",
+              "name": "Quilt (version.json)",
+              "type": "VersionManifest",
+              "artifact": {
+                "size": 1179,
+                "MD5": "6bd8c8b721c645bb73301afbd9f5075d",
+                "url": "https://bettendanet.github.io/nebula/repo/versions/1.20.1-quilt-0.27.1-beta.1/1.20.1-quilt-0.27.1-beta.1.json"
+              }
+            },
+            {
+              "id": "net.fabricmc:sponge-mixin:0.15.3+mixin.0.8.7",
+              "name": "Quilt (sponge-mixin)",
+              "type": "Library",
+              "artifact": {
+                "size": 1494835,
+                "MD5": "a33725dd52de94c33514b6867c8d0b4b",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/net/fabricmc/sponge-mixin/0.15.3+mixin.0.8.7/sponge-mixin-0.15.3+mixin.0.8.7.jar"
+              }
+            },
+            {
+              "id": "org.quiltmc:quilt-json5:1.0.4+final",
+              "name": "Quilt (quilt-json5)",
+              "type": "Library",
+              "artifact": {
+                "size": 25897,
+                "MD5": "47783c9a809c7dc7e69919e820f24688",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/quiltmc/quilt-json5/1.0.4+final/quilt-json5-1.0.4+final.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm:9.7.1",
+              "name": "Quilt (asm)",
+              "type": "Library",
+              "artifact": {
+                "size": 126093,
+                "MD5": "e2cdd32d198ad31427d298eee9d39d8d",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-analysis:9.7.1",
+              "name": "Quilt (asm-analysis)",
+              "type": "Library",
+              "artifact": {
+                "size": 35126,
+                "MD5": "4cd9e7178dfb85371bba3077e40cd514",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-analysis/9.7.1/asm-analysis-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-commons:9.7.1",
+              "name": "Quilt (asm-commons)",
+              "type": "Library",
+              "artifact": {
+                "size": 73459,
+                "MD5": "8344aea3c8b7d707e9d35a62710e77c9",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-commons/9.7.1/asm-commons-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-tree:9.7.1",
+              "name": "Quilt (asm-tree)",
+              "type": "Library",
+              "artifact": {
+                "size": 51939,
+                "MD5": "e85029f613b6469989cc7cf53fe06b74",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-tree/9.7.1/asm-tree-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.ow2.asm:asm-util:9.7.1",
+              "name": "Quilt (asm-util)",
+              "type": "Library",
+              "artifact": {
+                "size": 94519,
+                "MD5": "36d373a9cd6cad9b35db9f984c6b4bbb",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/ow2/asm/asm-util/9.7.1/asm-util-9.7.1.jar"
+              }
+            },
+            {
+              "id": "org.quiltmc:quilt-config:1.3.1",
+              "name": "Quilt (quilt-config)",
+              "type": "Library",
+              "artifact": {
+                "size": 155315,
+                "MD5": "4079ad0e22cd1963840c5a180b88796e",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/quiltmc/quilt-config/1.3.1/quilt-config-1.3.1.jar"
+              }
+            },
+            {
+              "id": "org.quiltmc:hashed:1.20.1",
+              "name": "Quilt (hashed)",
+              "type": "Library",
+              "artifact": {
+                "size": 798778,
+                "MD5": "dd58975c03d1d51cd176c9c2059af4b8",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/org/quiltmc/hashed/1.20.1/hashed-1.20.1.jar"
+              }
+            },
+            {
+              "id": "net.fabricmc:intermediary:1.20.1",
+              "name": "Quilt (intermediary)",
+              "type": "Library",
+              "artifact": {
+                "size": 573365,
+                "MD5": "3f4768ac751cac3418266d1d7aa15f55",
+                "url": "https://bettendanet.github.io/nebula/repo/lib/net/fabricmc/intermediary/1.20.1/intermediary-1.20.1.jar"
+              }
+            }
+          ]
+        },
+        {
+          "id": "com.simibubi.create:create:0.5.1-f-build.1417+mc1.20.1:jar",
+          "name": "Create",
+          "artifact": {
+            "size": 21769745,
+            "url": "https://bettendanet.github.io/nebula/servers/seal-build-1.20.1/quiltmods/required/create-fabric-1.20.1.jar",
+            "MD5": "b5356512045b1284af9c12dc9489049a"
+          }
+        },
+        {
+          "id": "org.orecruncher.dsurround:dsurround:0.3.3:jar",
+          "name": "Dynamic Surroundings",
+          "artifact": {
+            "size": 14370046,
+            "url": "https://bettendanet.github.io/nebula/servers/seal-build-1.20.1/quiltmods/required/DynamicSurroundings-Fabric-1.20.1-0.3.3.jar",
+            "MD5": "f539ae1290ca879e5909cdca00469202"
+          }
+        },
+        {
+          "id": "default.group:essential-container:1.0.0:jar",
+          "name": "Essential-container",
+          "artifact": {
+            "size": 53876629,
+            "url": "https://bettendanet.github.io/nebula/servers/seal-build-1.20.1/quiltmods/required/Essential-fabric_1-20-1.jar",
+            "MD5": "606e849b83f281516b4d4f22a882ffe5"
+          }
+        },
+        {
+          "id": "default.group:fabric-api:0.92.2+1.20.1:jar",
+          "name": "Fabric API",
+          "artifact": {
+            "size": 2107289,
+            "url": "https://bettendanet.github.io/nebula/servers/seal-build-1.20.1/quiltmods/required/fabric-api-0.92.2+1.20.1.jar",
+            "MD5": "92c58961866741106aae126558c9d4a7"
+          }
+        },
+        {
+          "id": "default.group:iris:1.6.9:jar",
+          "name": "Iris",
+          "artifact": {
+            "size": 2407136,
+            "url": "https://bettendanet.github.io/nebula/servers/seal-build-1.20.1/quiltmods/required/iris-mc1.20.1-1.6.9.jar",
+            "MD5": "07a396be80bde9a20d1a0035b884acaa"
+          }
+        },
+        {
+          "id": "com.soradgaming.simplehudenhanced:simplehudenhanced:4.7.2:jar",
+          "name": "Simple Hud Enhanced",
+          "artifact": {
+            "size": 1176687,
+            "url": "https://bettendanet.github.io/nebula/servers/seal-build-1.20.1/quiltmods/required/simple-hud-enhanced+1.20-1.20.1-4.7.2.jar",
+            "MD5": "b81861a05ffd313819b7437c5fa3c06a"
+          }
+        },
+        {
+          "id": "me.jellysquid.mods.sodium:sodium:0.5.3:jar",
+          "name": "Sodium",
+          "artifact": {
+            "size": 852373,
+            "url": "https://bettendanet.github.io/nebula/servers/seal-build-1.20.1/quiltmods/required/sodium-fabric-mc1.20.1-0.5.3.jar",
+            "MD5": "11db63c388786f3bfdb9e60c9c0a25c1"
+          }
+        },
+        {
+          "id": "de.maxhenkel.voicechat:voicechat:1.20.1-2.5.25:jar",
+          "name": "Simple Voice Chat",
+          "artifact": {
+            "size": 8081993,
+            "url": "https://bettendanet.github.io/nebula/servers/seal-build-1.20.1/quiltmods/required/voicechat-fabric-1.20.1-2.5.25.jar",
+            "MD5": "ef820bef5f6a8ad0265630f743f40718"
+          }
+        },
+        {
+          "id": "com.sk89q.worldedit:worldedit:7.2.15+6463-5ca4dff:jar",
+          "name": "WorldEdit",
+          "artifact": {
+            "size": 5825402,
+            "url": "https://bettendanet.github.io/nebula/servers/seal-build-1.20.1/quiltmods/required/worldedit-mod-7.2.15.jar",
+            "MD5": "bd0e7cff7896348faab92e43300d0639"
+          }
+        },
+        {
           "id": "Saving.txt",
           "name": "Saving.txt",
           "type": "File",
           "artifact": {
             "size": 5,
-            "url": "https://github.com/bettendanet/seal-launcher/tree/main/servers/seal-build-1.20.1/files/hello-this-is-a-test/Saving.txt",
+            "url": "https://bettendanet.github.io/nebula/servers/seal-build-1.20.1/files/hello-this-is-a-test/Saving.txt",
             "MD5": "f6a6263167c92de8644ac998b3c4e4d1",
             "path": "hello-this-is-a-test/Saving.txt"
           }
