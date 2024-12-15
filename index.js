@@ -5,6 +5,37 @@ window.onload = function trigger() {
     var html_element = document.getElementById("SomethingSpecial");
     const textElement = document.getElementById("text");
 
+    var RickRolled = false;
+
+    const videoContainer = document.getElementById("videoContainer");
+    let typedKeys = '';
+
+    document.addEventListener("keydown", function(event) {
+    typedKeys += event.key;
+    if (typedKeys === "maxwell") {
+        // Execute the code you want here
+        console.log("Maxwell executed!");
+        // Remove the Rickroll video player
+        const iframe = document.createElement("iframe");
+        iframe.width = "560";
+        iframe.height = "315";
+        iframe.src = "https://www.youtube.com/embed/U2Fjfqm-7g8?si=X7FJ7cvYamrBdkcP";
+        iframe.title = "YouTube video player";
+        iframe.frameBorder = "0";
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+        iframe.allowFullscreen = true;
+
+    // Clear any existing content in the video container
+        videoContainer.innerHTML = "";
+
+    // Append the iframe to the video container
+        videoContainer.appendChild(iframe);
+        
+        typedKeys = ''; // Reset the typed keys
+    }
+    });
+    
     if (html_element != null) {
          // A catchy phrase to bait unsuspicious people
         if (html_element.getAttribute("bait") != null) {
@@ -16,6 +47,33 @@ window.onload = function trigger() {
             trigger = html_element.getAttribute("trigger");
         }
     }
+
+    document.addEventListener("keydown", function(event) {
+        // Get the key that was pressed
+        const key = event.key; // You can also use event.code for physical key location
+    
+        if (key == "F" && RickRolled) {
+            parry.play();
+            
+                
+                setTimeout(() => {
+                    var rickrollElement = document.getElementById("rick");
+                    if (rickrollElement) {
+                        rickrollElement.parentNode.removeChild(rickrollElement);
+                    }
+                    textElement.innerHTML = "PARRY!";
+                    textElement.style.color = "white";
+                    document.body.style.backgroundColor = "black";
+                    setTimeout(() => {
+                        setTimeout(() => {
+                            textElement.innerHTML = "Hello World";
+                        }, 300);
+                        textElement.style.color = "black";
+                        document.body.style.backgroundColor = "white";
+                    }, 200);
+                }, 140);
+        }
+    });
     // Get the audio element
     var parry = document.getElementById("united-kingdom");
 
@@ -92,7 +150,15 @@ window.onload = function trigger() {
                 }, 140);
                 
                 setTimeout(() => {
-                    rickRoll();
+                    if (!RickRolled) {
+                        rickRoll();
+                        RickRolled = true
+                    } else {
+                        textElement.innerHTML = "I'm sorry, but good parry";
+                        setTimeout(() => {
+                            textElement.innerHTML = "Hello World";
+                        }, 2000)
+                    }
                     
                 }, 5000);
             } else {
