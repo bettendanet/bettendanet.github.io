@@ -85,7 +85,7 @@ window.onload = function trigger() {
                         textElement.innerHTML = "PARRY???";
                         setTimeout(() => {
                             textElement.innerHTML = "Hello World";
-                        }, 100)
+                        }, 300);
                         textElement.style.color = "black";
                         document.body.style.backgroundColor = "white";
                     }, 200);
