@@ -5,36 +5,14 @@ window.onload = function trigger() {
     var html_element = document.getElementById("SomethingSpecial");
     const textElement = document.getElementById("text");
 
+    var Maxwell = false;
     var RickRolled = false;
+    var Parryable = false;
+    var eeveebg = false;
+    var antiBug = false
 
     const videoContainer = document.getElementById("videoContainer");
     let typedKeys = '';
-
-    document.addEventListener("keydown", function(event) {
-    typedKeys += event.key;
-    if (typedKeys === "maxwell") {
-        // Execute the code you want here
-        console.log("Maxwell executed!");
-        // Remove the Rickroll video player
-        const iframe = document.createElement("iframe");
-        iframe.width = "560";
-        iframe.height = "315";
-        iframe.src = "https://www.youtube.com/embed/U2Fjfqm-7g8?si=X7FJ7cvYamrBdkcP";
-        iframe.title = "YouTube video player";
-        iframe.frameBorder = "0";
-        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-        iframe.referrerPolicy = "strict-origin-when-cross-origin";
-        iframe.allowFullscreen = true;
-
-    // Clear any existing content in the video container
-        videoContainer.innerHTML = "";
-
-    // Append the iframe to the video container
-        videoContainer.appendChild(iframe);
-        
-        typedKeys = ''; // Reset the typed keys
-    }
-    });
     
     if (html_element != null) {
          // A catchy phrase to bait unsuspicious people
@@ -47,33 +25,6 @@ window.onload = function trigger() {
             trigger = html_element.getAttribute("trigger");
         }
     }
-
-    document.addEventListener("keydown", function(event) {
-        // Get the key that was pressed
-        const key = event.key; // You can also use event.code for physical key location
-    
-        if (key == "F" && RickRolled) {
-            parry.play();
-            
-                
-                setTimeout(() => {
-                    var rickrollElement = document.getElementById("rick");
-                    if (rickrollElement) {
-                        rickrollElement.parentNode.removeChild(rickrollElement);
-                    }
-                    textElement.innerHTML = "PARRY!";
-                    textElement.style.color = "white";
-                    document.body.style.backgroundColor = "black";
-                    setTimeout(() => {
-                        setTimeout(() => {
-                            textElement.innerHTML = "Hello World";
-                        }, 300);
-                        textElement.style.color = "black";
-                        document.body.style.backgroundColor = "white";
-                    }, 200);
-                }, 140);
-        }
-    });
     // Get the audio element
     var parry = document.getElementById("united-kingdom");
 
@@ -94,6 +45,7 @@ window.onload = function trigger() {
             "}";
         document.getElementsByTagName("head")[0].appendChild(style);
 
+
         // Create container
         let Cooldiv = document.createElement("div");
         Cooldiv.setAttribute("id", "rick");
@@ -104,7 +56,7 @@ window.onload = function trigger() {
         video.setAttribute("id", "Astley");
         video.setAttribute("src", "YouLostTheGame.mp4");
         video.autoplay = true;
-        video.controls = true;
+        video.controls = false;
         video.setAttribute("allowfullscreen", "");
         video.setAttribute("width", "1060px");
         video.setAttribute("height", "615px");
@@ -113,11 +65,59 @@ window.onload = function trigger() {
         // Why not another reference
         video.setAttribute("title", "Cake is a lie");
 
-        // Put the iframe in the container
+        
         Cooldiv.appendChild(video);
 
-        // Append container to body
+        
         document.body.appendChild(Cooldiv);
+    }
+
+    function animateRickRoll() {
+        const rickElement = document.getElementById("rick");
+        var trash = document.getElementById("trashContainer");
+        const img = document.createElement("img");
+        img.src = "trashcan.png";
+        img.alt = "Centered Image";
+
+        trash.innerHTML = "";
+
+        trash.appendChild(img);
+
+        trash.style.display = "flex";
+
+        if (rickElement) {
+            rickElement.style.transition = "transform 0.2s linear";
+            rickElement.style.transform = "translate(-50%, -80%) scale(0.5)";
+            
+            setTimeout  (() => { 
+                rickElement.style.transition = "transform 0.3s ease-in";
+                rickElement.style.transform = "translate(-50%, -90%) scale(0.5) rotate(360deg)";
+                setTimeout  (() => {
+                    rickElement.style.transition = "transform 0.5s ease-in";
+                    rickElement.style.transform = "translate(-50%, -40%) scale(0.2)";
+                    setTimeout  (() => {
+                        
+                        
+                        if (rickElement) {
+                            
+                            trash.style.transition = "transform 0.2s ease-in-out";
+                            trash.style.transform = "scale(1.2, 0.8)";
+                            setTimeout(() => {
+                                trash.style.transform = "scale(1.0, 1.0)";
+                                setTimeout(() => {
+                                    trash.style.transform = "opacity(0%)";
+                                    setTimeout(() => {
+                                        trash.style.display = "none";
+                                    }, 200);
+                                }, 2000);
+                            },300);
+                            rickElement.parentNode.removeChild(rickElement);
+                        }
+                    }, 500)
+                }, 500);
+            }, 200);
+            
+        }
     }
 
     localStorage.setItem("KC", "");
@@ -129,30 +129,38 @@ window.onload = function trigger() {
 
             console.log("Current input sequence:", updated); // Debugging line
 
-            if (updated.includes(trigger)) {
+            if (updated.includes(trigger) && RickRolled == false && antiBug == false) {
+                antiBug = true
                 // If trigger met, execute order 66
                 localStorage.removeItem("KC");
-
-                parry.play();
                 
+                
+                textElement.innerHTML = "Uh, Hola! Esperame 5 segundos que estoy configurando algo";
                 setTimeout(() => {
-                    textElement.innerHTML = "PARRY!";
-                    textElement.style.color = "white";
-                    document.body.style.backgroundColor = "black";
+                    textElement.innerHTML = "Mientras esperas. Si ves algo que no te gusta, hazle parry con la F";
                     setTimeout(() => {
-                        textElement.innerHTML = "PARRY???";
                         setTimeout(() => {
                             textElement.innerHTML = "Hello World";
-                        }, 300);
-                        textElement.style.color = "black";
-                        document.body.style.backgroundColor = "white";
-                    }, 200);
-                }, 140);
+                        }, 2000);
+                        textElement.innerHTML = "Bueno, espero que estes bien, yo... volvere a lo mio";
+                    }, 2300);
+                }, 2000);
+                
                 
                 setTimeout(() => {
                     if (!RickRolled) {
                         rickRoll();
+                        Parryable = true
                         RickRolled = true
+                        setTimeout(() => {
+                            if (Parryable) {
+                                Parryable = false
+                                textElement.innerHTML = "Has sido RickRolled.";
+                                setTimeout(() => {
+                                    textElement.innerHTML = "Hello World";
+                                }, 1500)
+                            }
+                        }, 3000);
                     } else {
                         textElement.innerHTML = "I'm sorry, but good parry";
                         setTimeout(() => {
@@ -160,10 +168,78 @@ window.onload = function trigger() {
                         }, 2000)
                     }
                     
-                }, 5000);
+                }, 6800);
+            } else if (updated.includes("maxwell") && !Maxwell) {
+                localStorage.removeItem("KC");
+                console.log("Maxwell executed!");
+                Maxwell = true;
+                // Remove the Rickroll video player
+                const iframe = document.createElement("iframe");
+                iframe.width = "560";
+                iframe.height = "315";
+                iframe.src = "https://www.youtube.com/embed/U2Fjfqm-7g8?si=X7FJ7cvYamrBdkcP";
+                iframe.title = "YouTube video player";
+                iframe.frameBorder = "0";
+                iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+                iframe.referrerPolicy = "strict-origin-when-cross-origin";
+                iframe.allowFullscreen = true;
+        
+            // Clear any existing content in the video container
+                videoContainer.innerHTML = "";
+        
+            // Append the iframe to the video container
+                videoContainer.appendChild(iframe);
+                
+                typedKeys = ''; // Reset the typed keys
             } else {
                 // Else update stack
                 localStorage.setItem("KC", updated);
             }
+
+            if (updated.includes("eevee") && eeveebg == false) {
+                localStorage.removeItem("KC");
+                
+                console.log("Eevee mode enabled!");
+                eeveebg = true;
+                document.body.style.backgroundImage = 'url("eevee-background.jpg")';
+                document.body.style.backgroundSize = 'cover'; // Makes the image cover the entire screen
+                document.body.style.backgroundRepeat = 'no-repeat'; // Prevents the image from repeating
+                document.body.style.backgroundPosition = 'default'; // Centers the image
+                document.body.style.opacity = '0';
+                document.body.style.transform = "opacity 0.5s ease-in";
+                setTimeout(() => {
+                    document.body.style.opacity = '1';
+                })
+            } else if (updated.includes("eevee") && eeveebg == true) {
+                localStorage.removeItem("KC");
+                console.log("Eevee mode disabled!");
+                eeveebg = false;
+                document.body.style.backgroundImage = 'url("")';
+            }
+    
+        if (updated.includes("f") && RickRolled && Parryable) {
+            parry.play();
+            Parryable = false;
+            
+            
+            
+                
+                setTimeout(() => {
+                    textElement.innerHTML = "BUEN PARRY!!!";
+                    textElement.style.color = "white";
+                    document.body.style.backgroundColor = "black";
+                    animateRickRoll();
+                    setTimeout(() => {
+                        setTimeout(() => {
+                            textElement.innerHTML = "Hello World";
+                        }, 1000);
+                        textElement.style.color = "black";
+                        document.body.style.backgroundColor = "white";
+                    }, 200);
+                }, 140);
+        }
+
+
+        //THIS IS SO CURSED
         });
 }

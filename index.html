@@ -8,12 +8,27 @@
         body {
             transition: background-color 0.01s;
             font-size: 60px; /* Smooth transition */
+            
+        }
+        #trashContainer {
+            display: none; /* Use flexbox for centering */
+            justify-content: center; /* Horizontally center */
+            align-items: center; /* Vertically center */
+            height: 90vh; /* Make it occupy the full viewport height */
+            z-index: 1000;
+        }
+        #trashContainer img {
+            max-width: 100%; /* Ensure the image scales properly */
+            height: auto; /* Maintain aspect ratio */
         }
     </style>
 </head>
 <body>
+    <div id="trashContainer">
+        <img src="trashcan.png" alt="Centered Image">
+    </div>
     <div id="videoContainer"></div>
-    <p id="text">Hello World.</p>
+    <p id="text">Hello World</p>
     <div id="SomethingSpecial" bait="You've been baited!" trigger="ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRight"></div>
     <script src="index.js"></script>
     <audio id="united-kingdom" src="parry-united-kingdom.mp3" preload="auto"></audio>
