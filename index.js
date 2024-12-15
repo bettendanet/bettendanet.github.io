@@ -1,4 +1,7 @@
 window.onload = function trigger() {
+
+    //CREDITS TO Saleck3 for the rickroll code
+
     // Set the trigger (default, the konami code)
     var trigger = "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRight";
     console.log("Waiting for 2 seconds...");
